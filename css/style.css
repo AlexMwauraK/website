@@ -25,6 +25,7 @@ nav{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-transform: uppercase;
     color: aliceblue;
+    justify-content: center;
     padding-left: 6PX;
     font-weight: bold;
     font-size: 24px;
@@ -71,7 +72,7 @@ nav{
         border-radius: 10px;
         right: 0px;
         width: 35%;
-        height: 40vh;
+        height: 45vh;
         display: flex;
         flex-direction: column;
         text-transform: uppercase;
@@ -84,10 +85,15 @@ nav{
     }
     .navlinks li{
         padding: 10px;
+        padding-right: 0px;
         justify-content: center;
+        align-items: center;
         display: flex;
         width: 100%;
         position: relative;
+    }
+    .navlinks li a{
+        padding: 3px;
     }
     .burger{
         display: block;
@@ -125,4 +131,88 @@ nav{
     .toggles .line3{
         transform: rotate(45deg) translate(-5px,-5px);
     }
+}
+.main{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    margin: 20px 0px 0px 20px;
+}
+.card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+.front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #efefef;
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    border-radius: 15px;
+}
+.front img{
+    border-radius: 10px;
+}
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #000;
+    color: #fff;
+    transform: rotateY(180deg);
+    text-align: center;
+    font-size: 18px;
+    border-radius: 15px;
+    border: 3px solid aqua;
+    box-shadow: #000 7px 7px 5px 5x;
+}
+.backinfo{
+    margin-top: 20px;
+}
+.socials{
+    margin-top: 20px;
+    display: inline;
+}
+.socials img{
+    width: 30px;
+    display: flex;
+    border-radius: 100px;
+    box-shadow: #Fff 5px 5px 10px;
+    background: #fff;
+    transition: .5s ease;
+}
+.socials img:hover{
+    box-shadow: rgb(173, 255, 47) 5px 5px 5px;
+}
+.socials li{
+    list-style: none;
+    justify-content: center;
+    /* background-color: red; */
+    display: inline;
+    width: 50%;
+    justify-content: center;
+    margin-left: 60px;
+    align-items: center;
+    font-size: 15px;
+    display: flex;
+}
+.socials li a{
+    color: #fff;
+    padding: 10PX;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+    text-align: center;
 }
